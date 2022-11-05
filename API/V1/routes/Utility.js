@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const utilityController = require('../controllers/Utility');
+const utilityController = require('../controllers/utility');
 
 // Retrieve all employees
 router.get('/', utilityController.findAll);

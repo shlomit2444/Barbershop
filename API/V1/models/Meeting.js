@@ -1,3 +1,4 @@
+'user strict';
 var dbConn = require('../../../config');
 
 //Employee object create
@@ -7,15 +8,10 @@ var Meeting = function(meeting){
     this.IDUser      = meeting.IDUser;
     this.Date          = meeting.Date;
     this.Time          = meeting.Time;
-   // this.organization   = meeting.organization;
-   // this.designation    = meeting.designation;
-   // this.salary         = employee.salary;
-   // this.status         = meeting.status ? employee.status : 1;
-   // this.created_at     = new Date();
-   // this.updated_at     = new Date();
+
 };
 Meeting.create = function (newMeet, result) {    
-    dbConn.query("INSERT INTO meetings set ?", newMeet, function (err, res) {
+    dbConn.query("INSERT INTO Meetings set ?", newMeet, function (err, res) {
         if(err) {
             console.log("error: ", err);
             result(err, null);
@@ -27,7 +23,7 @@ Meeting.create = function (newMeet, result) {
     });           
 };
 Meeting.findById = function (id, result) {
-    dbConn.query("Select * from meetings where id = ? ", id, function (err, res) {             
+    dbConn.query("Select * from Meetings where IDMeeting = ? ", id, function (err, res) {             
         if(err) {
             console.log("error: ", err);
             result(err, null);
@@ -38,7 +34,7 @@ Meeting.findById = function (id, result) {
     });   
 };
 Meeting.findAll = function (result) {
-    dbConn.query("Select * from meetings", function (err, res) {
+    dbConn.query("Select * from Meetings", function (err, res) {
         if(err) {
             console.log("error: ", err);
             result(null, err);
@@ -50,7 +46,7 @@ Meeting.findAll = function (result) {
     });   
 };
 Meeting.update = function(id, meeting, result){
-  dbConn.query("UPDATE meetings SET IDUtility=?,IDUser=?,Date=?,Time=?,organization=?,designation=?,salary=? WHERE id = ?", [Meeting.IDUtility,Meeting.IDUser,Meeting.Date,Meeting.Time,employee.organization,employee.designation,employee.salary, id], function (err, res) {
+  dbConn.query("UPDATE Meetings SET IDUtility=?,IDUser=?,Date=?,Time=?,organization=?,designation=?,salary=? WHERE IDMeeting = ?", [Meeting.IDUtility,Meeting.IDUser,Meeting.Date,Meeting.Time,employee.organization,employee.designation,employee.salary, id], function (err, res) {
         if(err) {
             console.log("error: ", err);
             result(null, err);
@@ -60,7 +56,7 @@ Meeting.update = function(id, meeting, result){
     }); 
 };
 Meeting.delete = function(id, result){
-     dbConn.query("DELETE FROM meetings WHERE id = ?", [id], function (err, res) {
+     dbConn.query("DELETE FROM Meetings WHERE IDMeeting = ?", [id], function (err, res) {
         if(err) {
             console.log("error: ", err);
             result(null, err);

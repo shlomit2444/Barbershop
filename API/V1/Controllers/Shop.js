@@ -1,3 +1,5 @@
+//פונקציות של המספרות
+
 const Shop = require('../models/Shop');
 
 exports.findAll = function(req, res) {

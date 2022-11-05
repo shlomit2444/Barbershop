@@ -1,3 +1,6 @@
+
+//פונקציות של הפגישות
+
 const Meeting = require('../models/Meeting');
 
 exports.findAll = function(req, res) {

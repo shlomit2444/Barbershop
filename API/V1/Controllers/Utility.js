@@ -1,3 +1,5 @@
+//פונקציות של השירותים
+
 const Utility = require('../models/Utility');
 
 exports.findAll = function(req, res) {

@@ -1,4 +1,4 @@
-var dbConn = require('../../../../config');
+var dbConn = require('../../../config');
 
 //Employee object create
 var User = function(user){

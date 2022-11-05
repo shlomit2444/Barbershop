@@ -2,22 +2,12 @@ const mssql=require('mssql');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
 const config={
-    user:process.env.SQL_USER,
-    password:process.env.SQL_PASS ,
-    server:process.env.SQL_SERVER ,
-    database:process.env.SQL_DB,
-    port:parseInt(process.env.SQL_PORT),
-    options:{trustServerCertificate: true}
+  
 };
-// SQL_SERVER=localhost
-// SQL_DB=WhatsUpLogate
-// SQL_USER=waadmin
-// SQL_PASS=123
-// SQL_PORT=1433
-// SQL_OPTIONS_TRUSTED=true
+
 module.exports={
      Login:(req,res)=>{
-       //  console.log(config);
+     
         mssql.connect(config).
         then(function(conn){          
             const {Username,Pass}=req.body;

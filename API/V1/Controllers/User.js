@@ -1,3 +1,5 @@
+//פונקציות של המשתמשים
+
 const User = require('../models/User');
 
 exports.findAll = function(req, res) {
