@@ -1,4 +1,5 @@
-'user strict';
+
+
 var dbConn = require('../../../config');
 
 //Employee object create
@@ -46,7 +47,7 @@ Meeting.findAll = function (result) {
     });   
 };
 Meeting.update = function(id, meeting, result){
-  dbConn.query("UPDATE Meetings SET IDUtility=?,IDUser=?,Date=?,Time=?,organization=?,designation=?,salary=? WHERE IDMeeting = ?", [Meeting.IDUtility,Meeting.IDUser,Meeting.Date,Meeting.Time,employee.organization,employee.designation,employee.salary, id], function (err, res) {
+  dbConn.query("UPDATE Meetings SET IDUtility=?,IDUser=?,Date=?,Time=? WHERE IDMeeting = ?", [Meeting.IDUtility,Meeting.IDUser,Meeting.Date,Meeting.Time, id], function (err, res) {
         if(err) {
             console.log("error: ", err);
             result(null, err);

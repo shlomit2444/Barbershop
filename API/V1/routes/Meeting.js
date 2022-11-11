@@ -3,19 +3,19 @@ const express = require('express')
 const router = express.Router()
 const meetingController = require('../controllers/meeting');
 
-// Retrieve all employees
+// Retrieve all meetin
 router.get('/', meetingController.findAll);
 
-// Create a new employee
+// Create a new meetin
 router.post('/', meetingController.create);
 
-// Retrieve a single employee with id
+// Retrieve a single meetin with id
 router.get('/:id', meetingController.findById);
 
-// Update a employee with id
+// Update a meetin with id
 router.put('/:id', meetingController.update);
 
-// Delete a employee with id
+// Delete a meetin with id
 router.delete('/:id', meetingController.delete);
 
 module.exports = router;
