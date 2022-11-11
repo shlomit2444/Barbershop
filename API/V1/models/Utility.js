@@ -7,12 +7,7 @@ var Utility = function(utility){
     this.TimeDuringInMin   = utility.TimeDuringInMin;
     this.Price          = utility.Price;
     this.IDShop          = utility.IDShop;
- //   this.organization   = meeting.organization;
- //   this.designation    = meeting.designation;
- //   this.salary         = employee.salary;
- //   this.status         = meeting.status ? employee.status : 1;
- //   this.created_at     = new Date();
- //   this.updated_at     = new Date();
+ 
 };
 Utility.create = function (newUtility, result) {    
     dbConn.query("INSERT INTO Utilities set ?", newUtility, function (err, res) {

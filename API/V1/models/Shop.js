@@ -6,12 +6,7 @@ var Shop = function(shop){
     this.Adress      = shop.Adress;
     this.City          = shop.City;
     this.Phone          = shop.Phone;
- //   this.organization   = meeting.organization;
- //   this.designation    = meeting.designation;
- //   this.salary         = employee.salary;
- //   this.status         = meeting.status ? employee.status : 1;
- //   this.created_at     = new Date();
- //   this.updated_at     = new Date();
+
 };
 Shop.create = function (newShop, result) {    
     dbConn.query("INSERT INTO Shops set ?", newShop, function (err, res) {
