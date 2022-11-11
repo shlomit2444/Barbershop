@@ -1,7 +1,7 @@
 var dbConn = require('../../../config');
 
 
-//Employee object create
+
 var Utility = function(utility){
     this.DetailUtility     = utility.DetailUtility;
     this.TimeDuringInMin   = utility.TimeDuringInMin;

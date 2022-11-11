@@ -2,7 +2,7 @@
 
 var dbConn = require('../../../config');
 
-//Employee object create
+
     
 var Meeting = function(meeting){
     this.IDUtility     = meeting.IDUtility;

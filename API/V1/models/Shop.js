@@ -1,6 +1,6 @@
 var dbConn = require('../../../config');
 
-//Employee object create
+
 var Shop = function(shop){
     this.NameShop     = shop.NameShop;
     this.Adress      = shop.Adress;

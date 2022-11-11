@@ -1,6 +1,6 @@
 var dbConn = require('../../../config');
 
-//Employee object create
+
 var User = function(user){
     this.UserName     = user.UserName;
     this.UserPassword      = user.UserPassword;
