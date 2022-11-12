@@ -1,14 +1,14 @@
-'user strict';
+
 const mysql = require('mysql');
 
 //local mysql db connection
 //חיבור ל-SQL
 const dbConn = mysql.createConnection({
-  host     : 'sql8.freemysqlhosting.net',
-  user     : 'sql8539298',
-  password : 'nTildh8ZsW',
+  host     : 'sql104.epizy.com',
+  user     : 'epiz_32978818',
+  password : 'Hdmlz3abY29F5q',
   port:3306,
-  database : 'sql8539298',
+  database : 'epiz_32978818_barbeshop',
 
 });
 
